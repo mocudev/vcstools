@@ -17,7 +17,7 @@ def get_version():
 
 setup(name='mocu_vcstools',
       version=get_version(),
-      packages=['mocu_vcstools'],
+      packages=['vcstools'],
       package_dir={'': 'src'},
       scripts=[],
       install_requires=['pyyaml', 'python-dateutil'],
