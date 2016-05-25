@@ -15,7 +15,7 @@ def get_version():
             ver_file.close()
 
 
-setup(name='vcstools',
+setup(name='mocu_vcstools',
       version=get_version(),
       packages=['vcstools'],
       package_dir={'': 'src'},
