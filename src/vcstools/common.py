@@ -301,7 +301,8 @@ def run_shell_command(cmd, cwd=None, shell=False, us_env=True,
                 crflags['creationflags'] = subprocess.CREATE_NEW_PROCESS_GROUP
             else:
                 crflags['preexec_fn'] = os.setsid
-
+        if sys.platform == 'win32':
+            cmd = cmd.encode('ascii', 'ignore')
         proc = subprocess.Popen(cmd,
                                 shell=shell,
                                 cwd=cwd,
